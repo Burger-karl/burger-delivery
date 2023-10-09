@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+
+{% block content %}
+
+<div class="mt-4">
+    <h3 class="text-center text-warning">Make Your Order Now!</h3>
+</div>
+
+<div class="card mt-4 mb-5">
+    <div class="card-body">
+
+        
+        <form method="POST" class="row g-3">
+            {% csrf_token %}
+            
+            <div class="col-md-6">
+                <label for="inputPassword4" class="form-label"><b>Buyer</b></label>
+                <input type="input" value="{{request.user.username}}" class="form-control" id="inputPassword4" readonly>
+            </div>
+            
+            <div class="col-md-6">
+                <label for="inputEmail4" class="form-label"><b>Order Name</b></label>
+                {% render_field form.order_name class='form-control' %}
+            </div>
+            
+            <div class="col-md-6">
+                <label for="inputEmail4" class="form-label"><b>Recipient Name</b></label>
+                {% render_field form.recipient_name class='form-control' %}
+            </div>
+            
+            <div class="col-md-6">
+                <label for="inputEmail4" class="form-label"><b>Recipient Phone Number</b></label>
+                {% render_field form.recipient_phone class='form-control' %}
+            </div>
+            
+            <div class="col-12">
+                <label for="inputAddress" class="form-label"><b>Recipient Address</b></label>
+                {% render_field form.recipient_address class='form-control' %}
+            </div>
+            
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock content %}

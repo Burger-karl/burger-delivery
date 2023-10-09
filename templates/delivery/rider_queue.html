@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="m-4">
+    <h3 class="text-center text-warning">Customer Orders Assigned To {{request.user.username}} for Delivery</h3>
+</div>
+
+<div class="row">
+    <div class="col-12 table-responsive-sm">
+        <div class="card mx-auto mb-4" style="width: 76rem">
+            <!-- <img src="" alt="" class="card-img-top"> -->
+            <div class="card-body ">
+                <h5 class="card-title mb-3">Rider Queue</h5>
+        
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">Buyer</th>
+                            <th scope="col">Order Name</th>
+                            <th scope="col">Recipient Name</th>
+                            <th scope="col">Recipient Phone</th>
+                            <th scope="col">Recipient Address</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for o in obj %}
+                        {% if not o.is_delivered %}
+                        <tr>
+                            <td>{{o.buyer}}</td>
+                            <td>{{o.order_name}}</td>
+                            <td>{{o.recipient_name}}</td>
+                            <td>{{o.recipient_phone}}</td>
+                            <td>{{o.recipient_address}}</td>
+                            {% if o.has_rider %}
+                            <td><span class="badge bg-secondary">Enroute</span></td>
+                            {% else %}
+                            <td><span class="badge bg-warning">Pending</span></td>
+                            {% endif %}
+                            <td><a href="{% url 'complete-delivery' o.pk %}" class="btn btn-outline-primary btn-sm">Complete Delivery</a></td>
+                        </tr>
+                        {% endif %}
+                        {% endfor %}
+                    </tbody>
+                </table>
+        
+        
+            </div>
+        </div>
+        
+    </div>
+</div>
+{% endblock content %}

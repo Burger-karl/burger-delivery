@@ -1,0 +1,553 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+{% if request.user.is_buyer %}
+<!-- ======= Why Us Section ======= -->
+<section id="why-us" class="why-us">
+    <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+            <h2>Why Us</h2>
+            <p>Why Choose Our Restaurant</p>
+        </div>
+
+        <div class="row">
+
+            <div class="col-lg-4">
+                <div class="box" data-aos="zoom-in" data-aos-delay="100">
+                    <span>01</span>
+                    <h4>Healthy Meal</h4>
+                    <p>Burger provides healthy and well cooked meal for our customers, Burger is also vegan inclined and respect our customers. </p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mt-4 mt-lg-0">
+                <div class="box" data-aos="zoom-in" data-aos-delay="200">
+                    <span>02</span>
+                    <h4>Events</h4>
+                    <p>Burger restaurant also provides a wonderful environment for customers events, we have well equipped halls and centres</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mt-4 mt-lg-0">
+                <div class="box" data-aos="zoom-in" data-aos-delay="300">
+                    <span>03</span>
+                    <h4>Delivery</h4>
+                    <p>Burger restaurant also engages in delivery of food to our highly esteemed customers, our delivery service is top notch</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<!---====== End Why Us Section ======-->
+
+
+<!-- ======= Menu Section ======= -->
+<section id="menu" class="menu section-bg">
+    <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+            <h2>Menu</h2>
+            <p>Check Our Tasty Menu</p>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-lg-12 d-flex justify-content-center">
+                <ul id="menu-flters">
+                    <li data-filter="*" class="filter-active">All</li>
+                    <li data-filter=".filter-starters">Starters</li>
+                    <li data-filter=".filter-salads">Salads</li>
+                    <li data-filter=".filter-specialty">Specialty</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row menu-container" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="col-lg-6 menu-item filter-starters">
+                <img src="{% static 'foods/img/slider/food2.png' %}" class="menu-img" alt="">
+                <div class="menu-content">
+                    <a href="#">Lobster Bisque</a><span>#1700</span>
+                </div>
+                <div class="menu-ingredients">
+                    Fresh spinach, crisp romaine, tomatoes, and Greek olives
+                </div>
+            </div>
+
+            <div class="col-lg-6 menu-item filter-specialty">
+                <img src="{% static 'foods/img/slider/indomie_egg.png' %}" class="menu-img" alt="">
+                <div class="menu-content">
+                    <a href="#">Noodles and Egg</a><span>#1000</span>
+                </div>
+                <div class="menu-ingredients">
+                    Steamed noodles with fried egg and beef freshly prepared
+                </div>
+            </div>
+
+            <div class="col-lg-6 menu-item filter-starters">
+                <img src="{% static 'foods/img/slider/food3.png' %}" class="menu-img" alt="">
+                <div class="menu-content">
+                    <a href="#">Crab Cake</a><span>#3500</span>
+                </div>
+                <div class="menu-ingredients">
+                    A delicate crab cake served on a toasted roll with lettuce and tartar sauce
+                </div>
+            </div>
+
+            <div class="col-lg-6 menu-item filter-salads">
+                <img src="{% static 'foods/img/slider/food5.png' %}" class="menu-img" alt="">
+                <div class="menu-content">
+                    <a href="#">Caesar Selections</a><span>#3200</span>
+                </div>
+                <div class="menu-ingredients">
+                    Fresh spinach, crisp romaine, tomatoes, and Greek olives
+                </div>
+            </div>
+
+            <div class="col-lg-6 menu-item filter-specialty">
+                <img src="{% static 'foods/img/slider/yam_egg.jpg' %}" class="menu-img" alt="">
+                <div class="menu-content">
+                    <a href="#">Yam and Egg</a><span>#1500</span>
+                </div>
+                <div class="menu-ingredients">
+                    Steamed white yam with fried eggs, plantain and fish
+                </div>
+            </div>
+
+            <div class="col-lg-6 menu-item filter-starters">
+                <img src="{% static 'foods/img/categories/cat5.jpg' %}" class="menu-img" alt="">
+                <div class="menu-content">
+                    <a href="#">Mozzarella Stick</a><span>#1700</span>
+                </div>
+                <div class="menu-ingredients">
+                    Fresh spinach with mushrooms, hard boiled egg, and warm bacon vinaigrette
+                </div>
+            </div>
+
+            <div class="col-lg-6 menu-item filter-salads">
+                <img src="{% static 'foods/img/categories/menu-item-1.png' %}" class="menu-img" alt="">
+                <div class="menu-content">
+                    <a href="#">Greek Salad</a><span>#2200</span>
+                </div>
+                <div class="menu-ingredients">
+                    Fresh spinach, crisp romaine, tomatoes, and Greek olives
+                </div>
+            </div>
+
+            <div class="col-lg-6 menu-item filter-salads">
+                <img src="{% static 'foods/img/categories/Calamari.jpg' %}" class="menu-img" alt="">
+                <div class="menu-content">
+                    <a href="#">Spinach Salad</a><span>#2000</span>
+                </div>
+                <div class="menu-ingredients">
+                    Fresh spinach with mushrooms, hard boiled egg, and warm bacon vinaigrette
+                </div>
+            </div>
+
+            <div class="col-lg-6 menu-item filter-specialty">
+                <img src="{% static 'foods/img/categories/jollof.jpg' %}" class="menu-img" alt="">
+                <div class="menu-content">
+                    <a href="#">Jollof Rice</a><span>#850</span>
+                </div>
+                <div class="menu-ingredients">
+                    Steamed Jollof rice with Chicken freshly prepared
+                </div>
+            </div>
+
+            <div class="col-lg-6 menu-item filter-specialty">
+                <img src="{% static 'foods/img/slider/Rice_sauce.png' %}" class="menu-img" alt="">
+                <div class="menu-content">
+                    <a href="#">Rice and Sauce</a><span>#500</span>
+                </div>
+                <div class="menu-ingredients">
+                    Steamed white rice with chicken sauce freshly prepared
+                </div>
+            </div>
+
+            <div class="col-lg-6 menu-item filter-specialty">
+                <img src="{% static 'foods/img/slider/egusi.jpg' %}" class="menu-img" alt="">
+                <div class="menu-content">
+                    <a href="#">Egusi soup</a><span>#700</span>
+                </div>
+                <div class="menu-ingredients">
+                    Egusi soup with beef and chicken freshly prepared
+                </div>
+            </div>
+
+            <div class="col-lg-6 menu-item filter-specialty">
+                <img src="{% static 'foods/img/slider/beans_plantain.jpg' %}" class="menu-img" alt="">
+                <div class="menu-content">
+                    <a href="#">Beans and Plantain</a><span>#1200</span>
+                </div>
+                <div class="menu-ingredients">
+                    Steamed beans and pieces of fried plantain
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+</section>
+<!--====== End Menu Section ======-->
+
+<!-- ======= Specials Section ======= -->
+<section id="specials" class="specials">
+    <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+            <h2>Specials</h2>
+            <p>Check Our Specials</p>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-lg-3">
+                <ul class="nav nav-tabs flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">Pasta</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" href="#tab-2">Peppersoup</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" href="#tab-3">Tuscan Grilled</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" href="#tab-4">Spinach Salad</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" href="#tab-5">Akara and Pap</a>
+                    </li>
+
+                    {% if request.user.is_buyer %}
+                    <a href="{% url 'start-delivery' %}" class="btn mt-3 btn-warning btn-sm">Start Order</a>
+                    {% endif %}
+                </ul>
+            </div>
+    
+            <div class="col-lg-9 mt-4 mt-lg-0">
+                <div class="tab-content">
+                    <div class="tab-pane active show" id="tab-1">
+                        <div class="row">
+                            <div class="col-lg-8 details order-2 order-lg-1">
+                                <h3>Pasta Delicacy</h3>
+                                <p class="fst-italic">Pasta is simply prepared from the softest and delicious crabs with flavoured seeds and banana chips making it all better.</p>
+                                <p>Burger restaurant brings out the special delicacy of crab cake to soothe our ever demanding clients. Crab cake is new tried and tested delicacy by our ever creative chefs.</p>
+                                <p class="fst-italic">Price: <span class="text-warning">#3000</span></p>
+                            </div>
+                            
+                            <div class="col-lg-4 text-center order-1 order-lg-2">
+                                <img src="{% static 'foods/img/slider/menu-item-1.png' %}" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="tab-pane" id="tab-2">
+                        <div class="row">
+                            <div class="col-lg-8 details order-2 order-lg-1">
+                                <h3>Peppersoup Delicacy</h3>
+                                <p class="fst-italic">Peppersoup is simply prepared from the softest and delicious crabs with flavoured seeds and banana chips making it all better.</p>
+                                <p>Burger restaurant brings out the special delicacy of lobster bisque to soothe our ever demanding clients. Lobster Bisque is new tried and tested delicacy by our ever creative chefs.</p>
+                                <p class="fst-italic">Price: <span class="text-warning">#2500</span></p>
+                            </div>
+            
+                            <div class="col-lg-4 text-center order-1 order-lg-2">
+                                <img src="{% static 'foods/img/slider/peppersoup.png' %}" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="tab-pane" id="tab-3">
+                        <div class="row">
+                            <div class="col-lg-8 details order-2 order-lg-1">
+                                <h3>Tuscan Grilled Delicacy</h3>
+                                <p class="fst-italic">Tuscan grilled is simply prepared from the softest and delicious crabs with flavoured seeds and banana chips making it all better.</p>
+                                <p>Burger restaurant brings out the special delicacy of tuscan grilled to soothe our ever demanding clients. Tuscan Grilled is new tried and tested delicacy by our ever creative chefs.</p>
+                                <p class="fst-italic">Price: <span class="text-warning">#3600</span></p>
+                            </div>
+            
+                            <div class="col-lg-4 text-center order-1 order-lg-2">
+                                <img src="{% static 'foods/img/slider/food3.png' %}" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="tab-pane" id="tab-4">
+                        <div class="row">
+                            <div class="col-lg-8 details order-2 order-lg-1">
+                                <h3>Spinach Salad Delicacy</h3>
+                                <p class="fst-italic">Spinach Salad is simply prepared from the softest and delicious crabs with flavoured seeds and banana chips making it all better.</p>
+                                <p>Burger restaurant brings out the special delicacy of spinach salad to soothe our ever demanding clients. Spinach Salad is new tried and tested delicacy by our ever creative chefs.</p>
+                                <p class="fst-italic">Price: <span class="text-warning">#4200</span></p>
+                            </div>
+            
+                            <div class="col-lg-4 text-center order-1 order-lg-2">
+                                <img src="{% static 'foods/img/slider/food5.png' %}" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="tab-pane" id="tab-5">
+                        <div class="row">
+                            <div class="col-lg-8 details order-2 order-lg-1">
+                                <h3>Akara and Pap Delicacy</h3>
+                                <p class="fst-italic">Akara and pap is simply prepared from the softest and delicious crabs with flavoured seeds and banana chips making it all better.</p>
+                                <p>Burger restaurant brings out the special delicacy of akara and pap to soothe our ever demanding clients. Akara and pap is new tried and tested delicacy by our ever creative chefs.</p>
+                                <p class="fst-italic">Price: <span class="text-warning">#2200</span></p>
+                            </div>
+            
+                            <div class="col-lg-4 text-center order-1 order-lg-2">
+                                <img src="{% static 'foods/img/categories/Oat-and-Akara.jpg' %}" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!--======== End Specials Section =========-->
+
+
+<!-- ======= Book A Table Section ======= -->
+<section id="book-a-table" class="book-a-table">
+    <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+            <h2>Reservation</h2>
+            <p>Book a Table</p>
+        </div>
+
+        <form action="forms/book-a-table.php" method="post" role="form" class="php-email-form" data-aos="fade-up" data-aos-delay="100">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 form-group">
+                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                    <div class="validate"></div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email">
+                    <div class="validate"></div>
+                </div>
+      
+                <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
+                    <input type="text" class="form-control" name="phone" id="phone" placeholder="Your Phone" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                    <div class="validate"></div>
+                </div>
+      
+                <div class="col-lg-4 col-md-6 form-group mt-3">
+                    <input type="text" name="date" class="form-control" id="date" placeholder="Date" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                    <div class="validate"></div>
+                </div>
+      
+                <div class="col-lg-4 col-md-6 form-group mt-3">
+                    <input type="text" class="form-control" name="time" id="time" placeholder="Time" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                    <div class="validate"></div>
+                </div>
+      
+                <div class="col-lg-4 col-md-6 form-group mt-3">
+                    <input type="number" class="form-control" name="people" id="people" placeholder="# of people" data-rule="minlen:1" data-msg="Please enter at least 1 chars">
+                    <div class="validate"></div>
+                </div>
+            </div>
+            <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="5" placeholder="Message"></textarea>
+                <div class="validate"></div>
+            </div>
+            <div class="mb-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your booking request was sent. We will call back or send an Email to confirm your reservation. Thank you!</div>
+            </div>
+            <div class="text-center"><button type="submit">Book a Table</button></div>
+        </form>
+
+    </div>
+</section>
+<!--======= End Book A Table Section ========-->
+
+<!-- ======= Testimonials Section ======= -->
+<section id="testimonials" class="testimonials section-bg">
+    <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+            <h2>Testimonials</h2>
+            <p>What they're saying about us</p>
+        </div>
+
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <div class="testimonial-item">
+                        <p>
+                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                            Burger delivers the best service and also serve healthy meals, with different delicacies which are always of high quality and tasty, with Burger you can always have a nice and healthy meal.
+                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                        </p>
+                        <img src="{% static 'foods/img/testimonials/testimonials-1.jpg' %}" class="testimonial-img" alt="">
+                        <h3>Robert Lewy</h3>
+                        <h4>Ceo &amp; Founder</h4>
+                    </div>
+                </div><!-- End testimonial item -->
+
+                <div class="swiper-slide">
+                    <div class="testimonial-item">
+                        <p>
+                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                            Burger delivers the best service and also serve healthy meals, with different delicacies which are always of high quality and tasty, with Burger you can always have a nice and healthy meal.
+                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                        </p>
+                        <img src="{% static 'foods/img/testimonials/testimonials-2.jpg' %}" class="testimonial-img" alt="">
+                        <h3>Beth Mead</h3>
+                        <h4>UI/UX Designer</h4>
+                    </div>
+                </div><!-- End testimonial item -->
+
+                <div class="swiper-slide">
+                    <div class="testimonial-item">
+                        <p>
+                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                            Burger delivers the best service and also serve healthy meals, with different delicacies which are always of high quality and tasty, with Burger you can always have a nice and healthy meal.
+                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                        </p>
+                        <img src="{% static 'foods/img/testimonials/testimonials-3.jpg' %}" class="testimonial-img" alt="">
+                        <h3>Lauren James</h3>
+                        <h4>Lawyer</h4>
+                    </div>
+                </div><!-- End testimonial item -->
+
+                <div class="swiper-slide">
+                    <div class="testimonial-item">
+                        <p>
+                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                            Burger delivers the best service and also serve healthy meals, with different delicacies which are always of high quality and tasty, with Burger you can always have a nice and healthy meal.
+                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                        </p>
+                        <img src="{% static 'foods/img/testimonials/testimonials-4.jpg' %}" class="testimonial-img" alt="">
+                        <h3>Andreas Torres</h3>
+                        <h4>Sports Agent</h4>
+                    </div>
+                </div><!-- End testimonial item -->
+
+                <div class="swiper-slide">
+                    <div class="testimonial-item">
+                        <p>
+                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                            Burger delivers the best service and also serve healthy meals, with different delicacies which are always of high quality and tasty, with Burger you can always have a nice and healthy meal.
+                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                        </p>
+                        <img src="{% static 'foods/img/testimonials/testimonials-5.jpg' %}" class="testimonial-img" alt="">
+                        <h3>Pedri Balde</h3>
+                        <h4>Entrepreneur</h4>
+                    </div>
+                </div><!-- End testimonial item -->
+
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+    </div>
+</section>
+<!--====== End Testimonials Section ======-->
+
+
+
+
+<!-- ======= Chefs Section ======= -->
+<section id="chefs" class="chefs">
+    <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+            <h2>Chefs</h2>
+            <p>Our Professional Chefs</p>
+        </div>
+
+        <div class="row">
+
+            <div class="col-lg-4 col-md-6">
+                <div class="member" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="{% static 'foods/img/cheff.jpg' %}" class="img-fluid" alt="">
+                    <div class="member-info">
+                        <div class="member-info-content">
+                            <h4>Walter White</h4>
+                            <span>Master Chef</span>
+                        </div>
+                        <div class="social">
+                            <a href=""><i class="bi bi-twitter"></i></a>
+                            <a href=""><i class="bi bi-facebook"></i></a>
+                            <a href=""><i class="bi bi-instagram"></i></a>
+                            <a href=""><i class="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="member" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="{% static 'foods/img/chefs/chefy.jpeg' %}" class="img-fluid" alt="">
+                    <div class="member-info">
+                        <div class="member-info-content">
+                            <h4>Ronald Alba</h4>
+                            <span>Patissier</span>
+                        </div>
+                        <div class="social">
+                            <a href=""><i class="bi bi-twitter"></i></a>
+                            <a href=""><i class="bi bi-facebook"></i></a>
+                            <a href=""><i class="bi bi-instagram"></i></a>
+                            <a href=""><i class="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="member" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="{% static 'foods/img/chefs/chefs-3.jpg' %}" class="img-fluid" alt="">
+                    <div class="member-info">
+                        <div class="member-info-content">
+                            <h4>William Anderson</h4>
+                            <span>Cook</span>
+                        </div>
+                        <div class="social">
+                            <a href=""><i class="bi bi-twitter"></i></a>
+                            <a href=""><i class="bi bi-facebook"></i></a>
+                            <a href=""><i class="bi bi-instagram"></i></a>
+                            <a href=""><i class="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<!--======= End Chefs Section ========-->
+
+{% elif request.user.is_rider %}
+<div class="p-5 mb-4 bg-dark rounded-3">
+    <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold">Burger Orders</h1>
+        <p class="col-md-8 fs-4">Using a series of utilities, you can create this jumbotron, 
+            just like the one in previous versions of Bootstrap. Check out the examples below 
+            for how you can remix and restyle it to your liking.</p>
+
+        {% if request.user.is_rider %}
+        <a href="#" class="btn btn-primary btn-lg" type='button'>Orders Made</a>
+        {% endif %}
+    </div>
+</div>
+
+{% endif %}
+
+
+{% endblock content %}
